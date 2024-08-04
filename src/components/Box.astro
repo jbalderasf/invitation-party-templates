@@ -1,0 +1,15 @@
+---
+import camelCaseToCss from '../utils/cssStyles';
+import { type CssObject } from '../utils/cssObject';
+
+interface Props {
+  sx?: CssObject;
+}
+
+const { sx } = Astro.props;
+const styles = sx ? camelCaseToCss(sx) : '';
+---
+
+<div style={styles}>
+  <slot />
+</div>

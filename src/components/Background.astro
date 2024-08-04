@@ -1,0 +1,56 @@
+---
+import Box from './Box.astro';
+
+interface Props {
+  src: string;
+}
+
+const { src } = Astro.props;
+---
+
+<Box
+  sx={{
+    width: '100%',
+    height: '100%',
+    margin: '0',
+    padding: '0',
+    position: 'relative',
+  }}
+>
+  <Box
+    sx={{
+      width: '100%',
+      height: '100%',
+      margin: '0',
+      padding: '0',
+      position: 'absolute',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center',
+      backgroundImage: `url(${src})`,
+    }}
+  />
+  <Box
+    sx={{
+      width: '100%',
+      height: '100%',
+      margin: '0',
+      padding: '0',
+      position: 'absolute',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center center',
+      background: 'rgba(0, 0, 0, 0.3)',
+    }}
+  />
+  <Box
+    sx={{
+      width: '100%',
+      height: '100%',
+      margin: '0',
+      padding: '0',
+      position: 'absolute',
+      zIndex: '1',
+    }}
+  >
+    <slot />
+  </Box>
+</Box>

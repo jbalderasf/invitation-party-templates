@@ -1,0 +1,90 @@
+---
+import Box from '../../components/Box.astro';
+import Typography from '../../components/Typography.astro';
+import { Image } from 'astro:assets';
+import localSoccerPlayer from './soccer-player.png';
+import { Icon } from 'astro-icon/components';
+---
+
+<Box
+  sx={{
+    width: '100%',
+    textAlign: 'center',
+  }}
+>
+  <Image
+    class="animate__animated animate__fadeIn animate__slow animate__delay-1s"
+    src={localSoccerPlayer}
+    alt=""
+    style={{
+      width: '196px',
+      height: '294px',
+      marginTop: '60px',
+    }}
+  />
+  <div
+    style={{
+      width: '100%',
+      textAlign: 'center',
+      lineHeight: '40px',
+      textShadow: '4px 4px #000000',
+      marginTop: '-40px',
+      fontFamily: '"Oswald", sans-serif',
+    }}
+    class="animate__animated animate__fadeInUp animate__slow animate__delay-2s"
+  >
+    <Typography variant="big" color="white2"> SOCCER <br /> PARTY </Typography>
+  </div>
+
+  <div
+    style={{
+      width: '100%',
+      textAlign: 'center',
+      lineHeight: '20px',
+      fontFamily: '"Bebas Neue", sans-serif',
+      fontWeight: '400',
+      fontStyle: 'normal',
+      fontSize: '42px',
+      color: '#ebf2ff',
+      textShadow: '1px 1px #000',
+    }}
+    class="animate__animated animate__fadeInUp animate__slow animate__delay-2s"
+  >
+    CUMPLEAÑOS 1O DE DARIO
+  </div>
+
+  <div
+    style={{
+      width: '100%',
+      textAlign: 'center',
+      lineHeight: '40px',
+      textShadow: '2px 2px #000000',
+      fontFamily: '"Oswald", sans-serif',
+      marginTop: '20px',
+      marginBottom: '20px',
+    }}
+    class="animate__animated animate__fadeInUp animate__slow animate__delay-2s"
+  >
+    <Typography variant="h6" color="#d2b154">SEP 9</Typography>
+    <Typography variant="h6" color="white2">3:30 PM</Typography>
+  </div>
+  <div
+    style={{
+      textAlign: 'center',
+      lineHeight: '16px',
+      fontFamily: '"Open Sans", sans-serif',
+      fontWeight: '400',
+      fontSize: '12px',
+      color: '#ebf2ff',
+      position: 'fixed',
+      left: '0',
+      bottom: '20px',
+      width: '100%',
+    }}
+    class="animate__animated animate__fadeIn animate__slow animate__delay-2s"
+  >
+    Chiki Planet: Calz. Ignacio Zaragoza 1067-A, Agrícola Oriental, Iztacalco
+    <br/>
+    <Icon name="ic:baseline-whatsapp" /> 55 3878 7207
+  </div>
+</Box>

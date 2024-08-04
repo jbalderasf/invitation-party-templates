@@ -10,8 +10,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.13.1",
     "@astrojs/check": "^0.9.1",
+    "animate.css": "^4.1.1",
+    "astro": "^4.13.1",
+    "astro-particles": "^2.10.0",
+    "astro-single-file": "^1.1.0",
+    "html-minifier-terser": "^7.2.0",
+    "tsparticles": "^2.10.1",
+    "tsparticles-engine": "^2.10.1",
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@iconify-json/ic": "^1.1.17",
+    "@iconify-json/mdi": "^1.1.67",
+    "astro-icon": "^1.1.0"
   }
 }

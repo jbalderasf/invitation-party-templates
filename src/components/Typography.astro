@@ -1,0 +1,114 @@
+---
+import camelCaseToCss from '../utils/cssStyles';
+
+interface Props {
+  variant?: string;
+  color?: string;
+}
+
+const colors = {
+  white: {
+    color: '#FFF',
+  },
+  white2: {
+    color: '#ebf2ff',
+  },
+  blue: {
+    color: '#6590fd',
+  },
+  orange: {
+    color: '#ff4d23',
+  },
+  black: {
+    color: '#1e2429',
+  },
+  black2: {
+    color: '#292f36',
+  },
+  black3: {
+    color: '#292d31',
+  },
+};
+
+const variants = {
+  h1: {
+    fontSize: '28px',
+    fontWeight: '700',
+  },
+  h2: {
+    fontSize: '24px',
+    fontWeight: '700',
+  },
+  h3: {
+    ffontSize: '20px',
+    fontWeight: '700',
+  },
+  h4: {
+    fontSize: '18px',
+    fontWeight: '700',
+  },
+  h5: {
+    fontSize: '16px',
+    fontWeight: '700',
+  },
+  h6: {
+    fontSize: '40px',
+    fontWeight: '700',
+  },
+  body1: {
+    fontSize: '20px',
+    fontweight: '400',
+  },
+  body2: {
+    fontSize: '18px',
+    fontweight: '400',
+  },
+  body3: {
+    fontSize: '16px',
+    fontweight: '400',
+  },
+  body4: {
+    fontSize: '14px',
+    fontweight: '400',
+  },
+  body5: {
+    fontSize: '12px',
+    fontweight: '400',
+  },
+  caption1: {
+    fontSize: '20px',
+    fontweight: '300',
+  },
+  caption2: {
+    fontSize: '18px',
+    fontweight: '300',
+  },
+  caption3: {
+    fontSize: '16px',
+    fontweight: '300',
+  },
+  caption4: {
+    fontSize: '14px',
+    fontweight: '300',
+  },
+  caption5: {
+    fontSize: '12px',
+    fontweight: '300',
+  },
+  big: {
+    fontSize: '80px',
+    fontWeight: '700',
+  },
+};
+
+const { variant = 'h1', color = 'black' } = Astro.props;
+
+const styles = camelCaseToCss({
+  ...(colors[color] || { color }),
+  ...variants[variant],
+});
+---
+
+<span style={styles}>
+  <slot />
+</span>
